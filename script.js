@@ -12764,7 +12764,19 @@ document.addEventListener('contextmenu', function(e) {
     }
   });
 
+document.addEventListener('DOMContentLoaded', function() {
+    searchData(); // Initial display
+});
 
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+
+document.onkeydown = function(e) {
+    if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'c' || e.key === 'p')) {
+        e.preventDefault();
+    }
+};
 
 
 
